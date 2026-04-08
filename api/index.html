@@ -1,0 +1,3900 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="项目接口说明与使用指南">
+      
+      
+      
+        <link rel="canonical" href="https://ehanguykvan.github.io/Urfis/api/">
+      
+      
+        <link rel="prev" href="../quickstart/">
+      
+      
+        <link rel="next" href="../guide/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>代码文档 - 厄斐斯自动化跑团项目</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="厄斐斯自动化跑团项目" class="md-header__button md-logo" aria-label="厄斐斯自动化跑团项目" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            厄斐斯自动化跑团项目
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              代码文档
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quickstart/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  快速开始
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  代码文档
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../guide/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  人物卡
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../changelog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  更新日志
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="厄斐斯自动化跑团项目" class="md-nav__button md-logo" aria-label="厄斐斯自动化跑团项目" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    厄斐斯自动化跑团项目
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速开始
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    代码文档
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    代码文档
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        系统代码
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="系统代码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-p-id-new_id-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /add p id (new_id) (t)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /start
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /exit (t)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /load name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /save name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kill-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /kill id
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-python_code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /get python_code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /show (d)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-id-attribute-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /set id attribute value
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        局内代码
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="局内代码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        物品编号
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#give-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        give id 物品编号或装备代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        remove 装备代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (技能编号)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        escape
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        c
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        change
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#urfis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Urfis代码
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对象类型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="对象类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        全局对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#character" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Character对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weapon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weapon对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#armor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Armor对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessory对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#items_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Items_list对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Item对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills_list对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skill对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lej" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lej对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lej_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lej_list对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effect对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#judge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Judge对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loop对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Listen对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_r" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D_r对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damage对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restore对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#damage_ap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damage_ap对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore_ap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restore_ap对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目标
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="目标">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        角色类目标
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        其他目标
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        时机
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        无目标函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="无目标函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rn-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        r(n, m)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onlyn-func1-func2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        only(n, func1, func2, ...)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repeatn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        repeat(n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whenocac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        when(oc){ac}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ifacac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        if(ac){ac}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whileacac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        while(ac){ac}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        continue(n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        break()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        有目标函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="有目标函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        变量与列表
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        计算
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for_iac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        for(@_i){ac}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        insert()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#damagen-m-huo-np" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        damage(n, m, huo, np)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restoren-np" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        restore(n, np)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#damage_apn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        damage_ap(n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore_apn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        restore_ap(n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plus_bstrength-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        plus_b(strength, n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plus_gstrength-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        plus_g(strength, n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_flagname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set_flag(name)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove_flagname-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        remove_flag(name, n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devastate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        devastate()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        change(n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#owner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        owner()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        input()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        force(){}
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        判断类函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="判断类函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#have_flagname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        have_flag(name)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        in(n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vsn-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vs(n, m)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moren-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        more(n, m)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lessn-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        less(n, m)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equaln-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        equal(n, m)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        not(n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    人物卡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    更新日志
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        系统代码
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="系统代码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-p-id-new_id-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /add p id (new_id) (t)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /start
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /exit (t)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /load name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /save name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kill-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /kill id
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-python_code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /get python_code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /show (d)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-id-attribute-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /set id attribute value
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        局内代码
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="局内代码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        物品编号
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#give-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        give id 物品编号或装备代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        remove 装备代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (技能编号)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        escape
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        c
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        change
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#urfis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Urfis代码
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对象类型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="对象类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        全局对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#character" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Character对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weapon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weapon对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#armor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Armor对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessory对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#items_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Items_list对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Item对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills_list对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skill对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lej" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lej对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lej_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lej_list对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effect对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#judge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Judge对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loop对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Listen对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d_r" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D_r对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damage对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restore对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#damage_ap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damage_ap对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore_ap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restore_ap对象
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目标
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="目标">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        角色类目标
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        其他目标
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        时机
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        无目标函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="无目标函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rn-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        r(n, m)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onlyn-func1-func2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        only(n, func1, func2, ...)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repeatn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        repeat(n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whenocac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        when(oc){ac}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ifacac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        if(ac){ac}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whileacac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        while(ac){ac}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        continue(n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        break()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        有目标函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="有目标函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        变量与列表
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        计算
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for_iac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        for(@_i){ac}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        insert()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#damagen-m-huo-np" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        damage(n, m, huo, np)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restoren-np" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        restore(n, np)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#damage_apn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        damage_ap(n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore_apn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        restore_ap(n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plus_bstrength-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        plus_b(strength, n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plus_gstrength-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        plus_g(strength, n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_flagname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set_flag(name)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove_flagname-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        remove_flag(name, n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devastate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        devastate()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        change(n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#owner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        owner()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        input()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        force(){}
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        判断类函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="判断类函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#have_flagname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        have_flag(name)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        in(n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vsn-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vs(n, m)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moren-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        more(n, m)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lessn-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        less(n, m)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equaln-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        equal(n, m)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        not(n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">代码文档</h1>
+<h2 id="_2">系统代码</h2>
+<p>可以在除了<code>input()</code>执行期间的其他任何时候输入，必须带有前面的<code>/</code>。</p>
+<p>参数之间用空格隔开，带有空格的为可选参数。</p>
+<h3 id="add-p-id-new_id-t">/add p id (new_id) (t)</h3>
+<p>创建指定id的人物卡的一个<code>Character</code>对象，并将其加入战场</p>
+<p>p：<code>p</code>为作为玩家方，<code>e</code>为作为敌人方</p>
+<p>id：人物卡的<code>id</code>（即人物卡文件的文件名），同时会变成<code>Character</code>对象的<code>truly_id</code></p>
+<p>new_id：<code>Character</code>对象的<code>id</code>，默认为其人物卡的<code>id</code></p>
+<p>t：<code>t</code>为AI接管（敌人方默认），<code>f</code>为玩家操作（玩家方默认）</p>
+<h3 id="start">/start</h3>
+<p>以现在的环境配置开始战斗</p>
+<h3 id="exit-t">/exit (t)</h3>
+<p>强行结束战斗</p>
+<p>t：<code>t</code>为保留当前状态，并将其储存至本地文件（默认）。<code>f</code>为保留当前状态，但不更新本地存档</p>
+<h3 id="load-name">/load name</h3>
+<p>读取战斗配置文件（存档），不能在战斗中使用</p>
+<p>name：存档文件名（无须.txt后缀）</p>
+<h3 id="save-name">/save name</h3>
+<p>保存战斗配置文件（存档）</p>
+<p>name：存档文件名（无须.txt后缀）</p>
+<h3 id="kill-id">/kill id</h3>
+<p>强行杀死指定id的角色</p>
+<p>id：该<code>Character</code>对象的<code>id</code></p>
+<h3 id="get-python_code">/get python_code</h3>
+<p>强制获取系统内部信息</p>
+<p>python_code：Python代码，内置<code>show_class(name)</code>的函数，如：<code>/get show_class(finall_dict['p'])</code></p>
+<h3 id="show-d">/show (d)</h3>
+<p>展现战场双方</p>
+<p>d：默认为只有名字的列表，<code>i</code>为id列表，<code>d</code>为详细列表</p>
+<h3 id="set-id-attribute-value">/set id attribute value</h3>
+<p>强行设定玩家的对应属性为该数值</p>
+<p>id：要更改<code>Character</code>的<code>id</code></p>
+<p>attribute：<code>Character</code>的属性名称</p>
+<p>value：要改成的值</p>
+<h2 id="_3">局内代码</h2>
+<p>可以在战斗中，要求操作者输入局内代码时输入，不需要加<code>/</code>。</p>
+<h3 id="_4">物品编号</h3>
+<p>使用/装备上对应的物品</p>
+<h3 id="give-id">give id 物品编号或装备代码</h3>
+<p>给出物品或装备</p>
+<p>id：要接收的<code>Character</code>对象的<code>id</code></p>
+<p>物品编号或装备代码：询问前系统会列出可用的物品列表，从前往后数其序号，即为其物品编号（从1开始）。装备代码即其对象名称，如<code>main_weapon</code>、<code>armor</code>等。</p>
+<h3 id="remove">remove 装备代码</h3>
+<p>卸下对应的装备，如<code>remove accessory</code></p>
+<h3 id="_5">(技能编号)</h3>
+<p>使用对应的技能。特殊地，输入<code>0</code>即使用主武器普攻。</p>
+<h3 id="escape">escape</h3>
+<p>逃跑</p>
+<h3 id="c">c</h3>
+<p>继续下个阶段</p>
+<h3 id="change">change</h3>
+<p>切换主副武器</p>
+<h2 id="urfis">Urfis代码</h2>
+<p>狭义上的Urfis代码即写在effect属性内的代码，用以实现物品、技能效果。</p>
+<h2 id="_6">对象类型</h2>
+<h3 id="_7">全局对象</h3>
+<p>没有<code>ta</code>的函数、方法默认的目标，具有如下属性。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>返回值</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>round</td>
+<td>当前轮次数</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>turn</td>
+<td>当前回合数</td>
+<td>int</td>
+<td>单轮次内</td>
+</tr>
+<tr>
+<td>stage</td>
+<td>当前所处的阶段</td>
+<td>int</td>
+<td>1为准备阶段，2为交互阶段，3为行动阶段，4为结束阶段</td>
+</tr>
+</tbody>
+</table>
+<p>例：对自己造成“当前轮次数”点真实咒术伤害：<code>s.damage(round, tr, zhoushu)</code></p>
+<h3 id="character">Character对象</h3>
+<p>用于定义玩家角色的数据类型，具有以下属性。</p>
+<p>基础属性类：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>角色标识</td>
+<td>strength</td>
+<td>力量（体质）</td>
+</tr>
+<tr>
+<td>truly_id</td>
+<td>人物卡标识</td>
+<td>agility</td>
+<td>敏捷（精巧）</td>
+</tr>
+<tr>
+<td>ai</td>
+<td>角色是否为ai（返回bool值）</td>
+<td>wisdom</td>
+<td>智慧（博学）</td>
+</tr>
+<tr>
+<td>p_camp</td>
+<td>角色是否为队友阵营（返回bool值）</td>
+<td>spirit</td>
+<td>意志（精力）</td>
+</tr>
+<tr>
+<td>name</td>
+<td>角色姓名</td>
+<td>charm</td>
+<td>魅力（交涉）</td>
+</tr>
+<tr>
+<td>hp_max</td>
+<td>角色最大生命值</td>
+<td>luck</td>
+<td>幸运</td>
+</tr>
+<tr>
+<td>ap_max</td>
+<td>角色最大ap值</td>
+<td>fund</td>
+<td>资金</td>
+</tr>
+<tr>
+<td>level</td>
+<td>角色等阶</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>局内状态类：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hp</td>
+<td>角色当前生命值</td>
+<td>is_dead</td>
+<td>角色是否死亡（返回bool值）</td>
+</tr>
+<tr>
+<td>ap</td>
+<td>角色当前ap值</td>
+<td>is_escape</td>
+<td>角色是否逃跑（返回bool值）</td>
+</tr>
+<tr>
+<td>place</td>
+<td>角色当前位次</td>
+<td>dodge</td>
+<td>额外闪避加成</td>
+</tr>
+<tr>
+<td>p_a</td>
+<td>角色当前物理护甲</td>
+<td>block</td>
+<td>额外格挡加成</td>
+</tr>
+<tr>
+<td>m_a</td>
+<td>角色当前魔法护甲</td>
+<td>round</td>
+<td>角色现在的轮次数</td>
+</tr>
+<tr>
+<td>p_r</td>
+<td>角色当前物理护盾</td>
+<td>turn</td>
+<td>角色现在的回合数（回合中也计入）</td>
+</tr>
+<tr>
+<td>m_r</td>
+<td>角色当前魔法护盾</td>
+<td>in_turn</td>
+<td>角色是否正在自己的回合中（返回bool值）</td>
+</tr>
+<tr>
+<td>o_r</td>
+<td>角色当前其他护盾</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>要注意的是，<code>p_a</code>和<code>m_a</code>实际上是角色的“额外护甲值”，护甲给予的护甲值不纳入计算，在受伤时也会单独计算。</p>
+<p>装备技能类：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>main_weapon</td>
+<td>角色的主武器</td>
+<td>Weapon对象</td>
+</tr>
+<tr>
+<td>secondary_weapon</td>
+<td>角色的副武器</td>
+<td>Weapon对象</td>
+</tr>
+<tr>
+<td>armor</td>
+<td>角色的护甲</td>
+<td>Armor对象</td>
+</tr>
+<tr>
+<td>accessory</td>
+<td>角色的饰品</td>
+<td>Accessory对象</td>
+</tr>
+<tr>
+<td>items</td>
+<td>角色的物品列表</td>
+<td>Items_list对象</td>
+</tr>
+<tr>
+<td>skills</td>
+<td>角色的技能列表</td>
+<td>Skills_list对象</td>
+</tr>
+</tbody>
+</table>
+<p>额外的，对于Character对象，有如下与D_r对象相关的函数可以调用：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>可选参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>damage_all()</td>
+<td>角色本次战斗受到的总伤害</td>
+<td><code>p</code>：伤害类型</td>
+</tr>
+<tr>
+<td>damage_totle()</td>
+<td>角色本存档内受到的总伤害</td>
+<td><code>p</code>：伤害类型</td>
+</tr>
+<tr>
+<td>damage_turn()</td>
+<td>角色本回合受到的总伤害</td>
+<td><code>p</code>：伤害类型；<code>n</code>：第n个阶段内</td>
+</tr>
+<tr>
+<td>damage_round()</td>
+<td>角色本轮次受到的总伤害</td>
+<td><code>p</code>：伤害类型；<code>m</code>：第m个轮次内</td>
+</tr>
+<tr>
+<td>damage_all_count()</td>
+<td>角色本次战斗受到伤害的次数</td>
+<td><code>p</code>：伤害类型</td>
+</tr>
+<tr>
+<td>damage_totle_count()</td>
+<td>角色本存档内受到伤害的次数</td>
+<td><code>p</code>：伤害类型</td>
+</tr>
+<tr>
+<td>damage_turn_count()</td>
+<td>角色本回合受到伤害的次数</td>
+<td><code>p</code>：伤害类型；<code>n</code>：第n个阶段内</td>
+</tr>
+<tr>
+<td>damage_round_count()</td>
+<td>角色本轮次受到伤害的次数</td>
+<td><code>p</code>：伤害类型；<code>m</code>：第m个轮次内</td>
+</tr>
+</tbody>
+</table>
+<h3 id="weapon">Weapon对象</h3>
+<p>“武器对象”，用于定义主副武器的数据类型，具有以下属性。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>武器名称</td>
+<td>from</td>
+<td>武器来源</td>
+</tr>
+<tr>
+<td>type</td>
+<td>武器类型</td>
+<td>desc</td>
+<td>武器描述</td>
+</tr>
+<tr>
+<td>method</td>
+<td>武器攻击方式</td>
+<td>effect</td>
+<td>武器效果（返回Lej_list对象）</td>
+</tr>
+<tr>
+<td>ap</td>
+<td>武器攻击消耗的ap</td>
+<td>level</td>
+<td>武器等阶</td>
+</tr>
+</tbody>
+</table>
+<h3 id="armor">Armor对象</h3>
+<p>“护甲对象”，用于定义护甲的数据类型，具有以下属性。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>护甲名称</td>
+<td>from</td>
+<td>护甲来源</td>
+</tr>
+<tr>
+<td>type</td>
+<td>护甲类型</td>
+<td>desc</td>
+<td>护甲描述</td>
+</tr>
+<tr>
+<td>p_a</td>
+<td>物理护甲值</td>
+<td>effect</td>
+<td>护甲效果（返回Lej_list对象）</td>
+</tr>
+<tr>
+<td>m_a</td>
+<td>魔法护甲值</td>
+<td>level</td>
+<td>护甲等阶</td>
+</tr>
+</tbody>
+</table>
+<h3 id="accessory">Accessory对象</h3>
+<p>“饰品对象”，用于定义饰品的数据类型，具有以下属性。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>饰品名称</td>
+<td>desc</td>
+<td>饰品描述</td>
+</tr>
+<tr>
+<td>type</td>
+<td>饰品类型</td>
+<td>effect</td>
+<td>饰品效果（返回Lej_list对象）</td>
+</tr>
+<tr>
+<td>from</td>
+<td>饰品来源</td>
+<td>level</td>
+<td>饰品等阶</td>
+</tr>
+</tbody>
+</table>
+<h3 id="items_list">Items_list对象</h3>
+<p>“物品列表对象”，用于储存玩家拥有的所有物品。</p>
+<p>其第一项为物品数量，其余项均为<code>Item</code>对象。</p>
+<p>例：获取伤害来源角色的物品数量</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>itemslist.list().change(d.from.items)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>print(itemslist(0))
+</code></pre></div>
+<p>等效于：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>print(len(d.from.items).minus(1))
+</code></pre></div>
+<h3 id="item">Item对象</h3>
+<p>“物品对象”，用于定义物品的数据类型，具有以下属性。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>物品名称</td>
+<td>desc</td>
+<td>物品描述</td>
+</tr>
+<tr>
+<td>type</td>
+<td>物品类型</td>
+<td>effect</td>
+<td>物品效果（返回Lej_list对象）</td>
+</tr>
+<tr>
+<td>from</td>
+<td>物品来源</td>
+<td>level</td>
+<td>物品等阶</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>物品数量</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="skills_list">Skills_list对象</h3>
+<p>“技能列表对象”，用于储存玩家拥有的所有技能。</p>
+<p>与<code>Items_list</code>类似，第一项为技能数量，其余项均为<code>Skill</code>对象。</p>
+<h3 id="skill">Skill对象</h3>
+<p>“技能对象”，用于定义技能的数据类型，具有以下属性。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>技能名称</td>
+<td>effect</td>
+<td>技能效果（返回Lej_list对象）</td>
+</tr>
+<tr>
+<td>type</td>
+<td>技能类型</td>
+<td>attr</td>
+<td>技能属性</td>
+</tr>
+<tr>
+<td>from</td>
+<td>技能来源</td>
+<td>ap</td>
+<td>技能消耗的ap</td>
+</tr>
+<tr>
+<td>desc</td>
+<td>技能描述</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="lej">Lej对象</h3>
+<p>在程序中，技能的效果（<code>effect</code>属性中的Urfis代码）普遍以<code>Lej</code>的数据结构存储，<code>Lej</code>即<code>Effect</code>、<code>Loop</code>和<code>Judge</code>三种对象的首字母缩写，自然也包含这三种类型。</p>
+<p><code>Effect</code>为最基础的对象，一切最底层的数据获取、处理，都通过解析<code>Effect</code>实现。</p>
+<p><code>Loop</code>负责处理循环代码，其内部往往嵌套着子<code>Lej</code>对象，具有<strong>for</strong>和<strong>while</strong>两种循环模式。</p>
+<p><code>Judge</code>负责处理判断代码，实际上是提前封装好的，可以返回<code>True</code>或<code>False</code>的<code>Effect</code>对象。</p>
+<h3 id="lej_list">Lej_list对象</h3>
+<p>“效果列表对象”，用于储存<code>Lej</code>对象的列表。</p>
+<p>与<code>items_list</code>不同，列表中只有<code>Lej</code>对象。</p>
+<h3 id="effect">Effect对象</h3>
+<p>“效果对象”，用于定义基础技能效果的数据类型。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>返回值类型</th>
+<th>名称来源</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oc</td>
+<td>效果时机</td>
+<td><code>Effect</code>对象</td>
+<td>occasion</td>
+<td><code>immediate</code></td>
+</tr>
+<tr>
+<td>ta</td>
+<td>效果目标</td>
+<td></td>
+<td>target</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td>ac</td>
+<td>效果行为</td>
+<td>str</td>
+<td>action</td>
+<td></td>
+</tr>
+<tr>
+<td>pa</td>
+<td>效果内参数</td>
+<td>list或<code>None</code></td>
+<td>parameter</td>
+<td><code>[]</code>或<code>None</code></td>
+</tr>
+<tr>
+<td>ex（暂时废弃）</td>
+<td>效果外参数</td>
+<td></td>
+<td>external parameter</td>
+<td></td>
+</tr>
+<tr>
+<td>re</td>
+<td>效果返回值</td>
+<td></td>
+<td>return</td>
+<td><code>None</code></td>
+</tr>
+</tbody>
+</table>
+<p>“获得一个属性”或“执行一个函数”时，都会将其属性名或函数名封装到<code>ac</code>中。前者<code>ta</code>默认值为<code>None</code>，后者默认值为<code>[]</code>。</p>
+<p>想要快速区分，即包含<code>()</code>的代码为函数，其<code>ta</code>默认值为<code>[]</code>（零参数）。没有<code>()</code>的代码为属性，其默认值为<code>None</code>（无参数）。</p>
+<h3 id="judge">Judge对象</h3>
+<p>“判断对象”，用于定义判断的数据类型。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>返回值类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>judgement</td>
+<td>判断条件</td>
+<td><code>Effect</code>对象</td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>判断成功的执行内容</td>
+<td><code>Lej</code>对象</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>判断失败的执行内容</td>
+<td><code>Lej</code>对象</td>
+<td><code>None</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="loop">Loop对象</h3>
+<p>“循环对象”，用于定义循环的数据类型。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>返回值类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>循环类型</td>
+<td>str</td>
+<td>for或while</td>
+</tr>
+<tr>
+<td>count</td>
+<td>循环次数</td>
+<td>int</td>
+<td>0</td>
+</tr>
+<tr>
+<td>require</td>
+<td>循环开始时的判定条件</td>
+<td><code>Lej</code>对象</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td>for_variable</td>
+<td>负责遍历的变量</td>
+<td>list[0]</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td>for_list</td>
+<td>被遍历的列表</td>
+<td>list</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td>content</td>
+<td>循环的执行内容</td>
+<td><code>Lej_list</code>对象</td>
+<td><code>None</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="listen">Listen对象</h3>
+<p>“监听对象”，<code>listen</code>为全局唯一的监听者。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>返回值类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ocses</td>
+<td>监听列表</td>
+<td>list</td>
+<td>[ ]</td>
+</tr>
+</tbody>
+</table>
+<p><code>ocses</code>由<code>ocs</code>构成，<code>ocs</code>作为一个列表，遵循如下结构：</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>值</th>
+<th>含义</th>
+<th>返回值类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>lej_number</td>
+<td>lej标识</td>
+<td>int</td>
+</tr>
+<tr>
+<td>1</td>
+<td>lej_list_number</td>
+<td>lej_list标识</td>
+<td>int</td>
+</tr>
+<tr>
+<td>2</td>
+<td>player_id</td>
+<td>来源角色id</td>
+<td>str</td>
+</tr>
+<tr>
+<td>3</td>
+<td>lej_list</td>
+<td>lej_list</td>
+<td><code>Lej_list</code>对象</td>
+</tr>
+<tr>
+<td>4</td>
+<td>lej</td>
+<td>lej</td>
+<td><code>lej</code>对象</td>
+</tr>
+<tr>
+<td>5</td>
+<td>skill</td>
+<td>来源技能</td>
+<td><code>Weapon</code>、<code>Item</code>、<code>Skill</code>对象等</td>
+</tr>
+</tbody>
+</table>
+<h3 id="d_r">D_r对象</h3>
+<p>“结算列表对象”，储存所有即将结算的<code>Damage</code>、<code>Restore</code>、<code>Damage_ap</code>和<code>Restore_ap</code>对象。</p>
+<h3 id="damage">Damage对象</h3>
+<p>“伤害对象”，用于定义即将结算的伤害，具有以下属性。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>返回值类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source</td>
+<td>伤害的来源技能</td>
+<td><code>Skill</code>对象</td>
+</tr>
+<tr>
+<td>name</td>
+<td>伤害的来源技能的名字</td>
+<td>str</td>
+</tr>
+<tr>
+<td>from</td>
+<td>伤害的来源角色</td>
+<td><code>Character</code>对象</td>
+</tr>
+<tr>
+<td>type</td>
+<td>伤害的类型</td>
+<td>str</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>伤害的属性</td>
+<td>str</td>
+</tr>
+<tr>
+<td>value</td>
+<td>伤害的数值</td>
+<td>int</td>
+</tr>
+<tr>
+<td>to</td>
+<td>伤害的目标角色</td>
+<td><code>Character</code>对象</td>
+</tr>
+<tr>
+<td>all</td>
+<td>伤害的目标群体</td>
+<td>list</td>
+</tr>
+<tr>
+<td>is_immunity</td>
+<td>伤害是否已被免疫</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>id</td>
+<td>伤害标识</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<p>其中，伤害类型共有五种：<code>p</code>物理伤害，<code>m</code>·魔法伤害，<code>o</code>其他伤害，<code>tr</code>真实伤害，<code>n</code>未知伤害</p>
+<p>伤害属性参考“快速开始”页中的<code>attri</code>属性中的可能值。</p>
+<p>伤害数值<code>value</code>在<code>Damage</code>对象创立时会被定义为<code>0</code>，并在<code>b_damage</code>结算之后再<strong>加上</strong>应当扣除的数值。尤其对于百分比扣除的伤害值，会直接<strong>用此刻的hp/hp_max值</strong>计算伤害值，然后再触发<code>w_damage</code>与<code>a_damage</code>。因此可能会出现在<code>w_damage</code>时机生命值发生变化，却仍用原生命值计算了伤害值的情况。</p>
+<p>当治疗量溢出时，<code>value</code>会保留最初的治疗量，但实际上直接设定<code>hp</code>为<code>hp_max</code>。</p>
+<p>当一个伤害具有多个目标时，<code>to</code>只会返回当前正在结算的角色。而在任何时候，<code>all</code>属性都会返回该伤害的所有对象所组成的列表（哪怕目标数为1，也会返回项数为1的列表）</p>
+<p>除了玩家直接修改以外，系统修改<code>is_immunity</code>的时机只有两个：<code>b_damage</code>与<code>w_damage</code>结算完成后。而系统检测到<code>is_immunity == True</code>后，会立即中止当前伤害的结算，即不触发后续的<code>w_damage</code>或<code>a_damage</code>。</p>
+<h3 id="restore">Restore对象</h3>
+<p>“恢复对象”，用于定义即将结算的恢复，具有以下属性。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>返回值类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source</td>
+<td>恢复的来源技能</td>
+<td><code>Skill</code>对象</td>
+</tr>
+<tr>
+<td>name</td>
+<td>恢复的来源技能的名字</td>
+<td>str</td>
+</tr>
+<tr>
+<td>from</td>
+<td>恢复的来源角色</td>
+<td><code>Character</code>对象</td>
+</tr>
+<tr>
+<td>value</td>
+<td>恢复的数值</td>
+<td>int</td>
+</tr>
+<tr>
+<td>to</td>
+<td>恢复的目标角色</td>
+<td><code>Character</code>对象</td>
+</tr>
+<tr>
+<td>all</td>
+<td>恢复的目标群体</td>
+<td>list</td>
+</tr>
+<tr>
+<td>is_immunity</td>
+<td>恢复是否已被免疫</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>id</td>
+<td>恢复标识</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="damage_ap">Damage_ap对象</h3>
+<p>“AP伤害对象”，用于定义即将结算的ap伤害，具有以下属性。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>返回值类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source</td>
+<td>伤害的来源技能</td>
+<td><code>Skill</code>对象</td>
+</tr>
+<tr>
+<td>name</td>
+<td>伤害的来源技能的名字</td>
+<td>str</td>
+</tr>
+<tr>
+<td>from</td>
+<td>伤害的来源角色</td>
+<td><code>Character</code>对象</td>
+</tr>
+<tr>
+<td>value</td>
+<td>伤害的数值</td>
+<td>int</td>
+</tr>
+<tr>
+<td>to</td>
+<td>伤害的目标角色</td>
+<td><code>Character</code>对象</td>
+</tr>
+<tr>
+<td>all</td>
+<td>伤害的目标群体</td>
+<td>list</td>
+</tr>
+<tr>
+<td>is_immunity</td>
+<td>伤害是否已被免疫</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>id</td>
+<td>伤害标识</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="restore_ap">Restore_ap对象</h3>
+<p>“AP恢复对象”，用于定义即将结算的ap恢复，具有以下属性。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+<th>返回值类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source</td>
+<td>恢复的来源技能</td>
+<td><code>Skill</code>对象</td>
+</tr>
+<tr>
+<td>name</td>
+<td>恢复的来源技能的名字</td>
+<td>str</td>
+</tr>
+<tr>
+<td>from</td>
+<td>恢复的来源角色</td>
+<td><code>Character</code>对象</td>
+</tr>
+<tr>
+<td>value</td>
+<td>恢复的数值</td>
+<td>int</td>
+</tr>
+<tr>
+<td>to</td>
+<td>恢复的目标角色</td>
+<td><code>Character</code>对象</td>
+</tr>
+<tr>
+<td>all</td>
+<td>恢复的目标群体</td>
+<td>list</td>
+</tr>
+<tr>
+<td>is_immunity</td>
+<td>恢复是否已被免疫</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>id</td>
+<td>恢复标识</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_8">目标</h2>
+<p>一些函数或时机，会在其<strong>作用域</strong>内提供一个可用的目标，即<strong>目标域</strong>。在目标域内，我们可以访问所给的目标（如<code>w_damage</code>会提供<code>d.</code>目标）。</p>
+<p>作用域的起止非常好理解：作用域会延续到函数结算完毕。通俗理解，对于有多行代码的函数，则作用域为缩进的所有代码，以上面的<code>w_damage</code>为例：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>when(w_damage){
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    d.目标域
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>}
+</code></pre></div>
+<p>需要注意的是，同一类型的目标，其目标域会覆盖。例如以下代码：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>when(w_damage){
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    d.目标域1
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    when(w_damage){
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        d.目标域2
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    }
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    d.目标域3
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>}
+</code></pre></div>
+<p>两个<code>w_damage</code>会各自提供两个不同的<code>d.</code>目标，因此目标域1和3会是最外层的<code>d.</code>，目标域2的<code>d.</code>会被更新为最新的目标。</p>
+<h3 id="_9">角色类目标</h3>
+<p>以下方法或函数可以返回<code>Character</code>或<code>Character_list</code>对象，并提供<code>as</code>目标域。</p>
+<p>角色类目标具有两种：<strong>一次目标</strong>以及<strong>二次目标</strong>。两者具有相同的参数规则，唯一不同的是，前者是从所有“未死亡”“未逃跑”的角色中进行选择，而后者则是在已经选择好了的情况下，进行的二次选择。</p>
+<p>此外，一次目标类的目标，会无视其前方的<code>ta</code>。而对于二次目标类的目标，如果其前方有<code>ta</code>，会将其识别为<code>Character</code>或<code>Character_list</code>对象，并在其中进行二次选择。</p>
+<p>如果二次目标类的方法/函数不处于<code>as</code>的目标域内（即尚未进行一次选择），则会将其转换成一次目标进行选择。</p>
+<p>例如我们要实现如下效果：当场上任意敌方玩家行动阶段开始时，对其造成10点伤害，就可以这么写：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>when(all_enemy.b_round(3)){
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    t.damage(10, m, huo)
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>}
+</code></pre></div>
+<p>此时由于<code>all_enemy</code>已经选择了一名玩家，<code>t</code>会在已经选中的玩家中二次选择，即已被选中的那名角色。</p>
+<p>但有些情况下，二次选择也可以通过“将选中的玩家储存到永久列表”中的办法实现。例如我们要实现如下效果：对场上随机三个角色造成10点伤害，然后对其中一名随机角色造成额外的20点伤害，就可以这么写：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>d_list.list().change(random_a(3))
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>@d_list.damage(10, m, huo)
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>@d_list.t.damage(10, m, huo)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>含义</th>
+<th>其对应的二次目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s</td>
+<td>自己</td>
+<td>s</td>
+</tr>
+<tr>
+<td>now</td>
+<td>当前回合的角色</td>
+<td>now</td>
+</tr>
+<tr>
+<td>target</td>
+<td>自选敌方目标</td>
+<td>t</td>
+</tr>
+<tr>
+<td>random</td>
+<td>随机敌方目标</td>
+<td>ran</td>
+</tr>
+<tr>
+<td>target_partner</td>
+<td>自选友方目标</td>
+<td>tp</td>
+</tr>
+<tr>
+<td>random_partner</td>
+<td>随机友方目标</td>
+<td>rp</td>
+</tr>
+<tr>
+<td>target_partner_e</td>
+<td>自选除自己外的友方目标</td>
+<td>tp_e</td>
+</tr>
+<tr>
+<td>random_partner_e</td>
+<td>随机除自己外的友方目标</td>
+<td>rp_e</td>
+</tr>
+<tr>
+<td>target_a</td>
+<td>自选目标</td>
+<td>ta</td>
+</tr>
+<tr>
+<td>random_a</td>
+<td>随机目标</td>
+<td>ra</td>
+</tr>
+<tr>
+<td>target_a_e</td>
+<td>自选除自己外的目标</td>
+<td>ta_e</td>
+</tr>
+<tr>
+<td>random_a_e</td>
+<td>随机除自己外的目标</td>
+<td>ra_e</td>
+</tr>
+<tr>
+<td>all_enemy</td>
+<td>场上全体敌人</td>
+<td>ts</td>
+</tr>
+<tr>
+<td>all_partner</td>
+<td>场上全体队友</td>
+<td>ps</td>
+</tr>
+<tr>
+<td>all_partner_e</td>
+<td>场上除自己外的全体队友</td>
+<td>ps_e</td>
+</tr>
+<tr>
+<td>all</td>
+<td>场上全体角色</td>
+<td>as</td>
+</tr>
+<tr>
+<td>all_e</td>
+<td>场上除自己外的全体角色</td>
+<td>as_e</td>
+</tr>
+</tbody>
+</table>
+<p>而对于以上除了<code>now</code>、<code>s</code>的所有方法，都可以当做函数使用，以target为例：</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>target(n)</td>
+<td>自选n个敌方目标</td>
+</tr>
+<tr>
+<td>target(&gt; n)</td>
+<td>自选多于n个的敌方目标</td>
+</tr>
+<tr>
+<td>target(&lt; n)</td>
+<td>自选少于n个的敌方目标</td>
+</tr>
+<tr>
+<td>target(n, m)</td>
+<td>自选多于n，少于m个敌方目标</td>
+</tr>
+</tbody>
+</table>
+<p>其中n和m都是<code>int</code>类型，当可选的目标群体只有一个目标时，系统会自动帮玩家选择，而不会询问。</p>
+<h3 id="_10">其他目标</h3>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>含义</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d</td>
+<td>所受的伤害对象</td>
+<td><code>Damage</code>对象</td>
+</tr>
+<tr>
+<td>r</td>
+<td>恢复的体力对象</td>
+<td><code>Restore</code>对象</td>
+</tr>
+<tr>
+<td>dap</td>
+<td>所受的ap伤害对象</td>
+<td><code>Damage_ap</code>对象</td>
+</tr>
+<tr>
+<td>rap</td>
+<td>恢复的ap对象</td>
+<td><code>Restore_ap</code>对象</td>
+</tr>
+<tr>
+<td>losed</td>
+<td>失去的对象</td>
+<td><code>Weapon</code>、<code>Item</code>对象等</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_11">时机</h2>
+<p>时机代码由两个部分构成：前缀与主体，两者之间用下划线<code>_</code>连接。前缀具有三种：<code>b</code>、<code>w</code>、<code>a</code>，分别对应before、when、after，即“……前”“……中”与“……后”。</p>
+<p>只有两个时机除外：<code>immediate</code>与<code>only</code>，详见如下：</p>
+<table>
+<thead>
+<tr>
+<th>时机</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>immediate</td>
+<td>立刻</td>
+<td><code>oc</code>默认值，不需要人工写入</td>
+</tr>
+<tr>
+<td>only(n, oc1, oc2, ...)</td>
+<td>只有当括号内的时机同时满足大于等于n个时，才返回“时机正确”</td>
+<td>以此来实现<code>and</code>、<code>or</code>等操作</td>
+</tr>
+</tbody>
+</table>
+<p>以下时机均需要携带前缀：</p>
+<table>
+<thead>
+<tr>
+<th>时机主体</th>
+<th>含义</th>
+<th>ta</th>
+<th>提供目标域</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>damaged</td>
+<td>该角色受伤时</td>
+<td><code>Character</code>对象</td>
+<td><code>d.</code></td>
+</tr>
+<tr>
+<td>restore</td>
+<td>该角色恢复体力时</td>
+<td><code>Character</code>对象</td>
+<td><code>r.</code></td>
+</tr>
+<tr>
+<td>damaged_ap</td>
+<td>该角色ap受伤时</td>
+<td><code>Character</code>对象</td>
+<td><code>dap.</code></td>
+</tr>
+<tr>
+<td>restore_ap</td>
+<td>该角色恢复ap时</td>
+<td><code>Character</code>对象</td>
+<td><code>rap.</code></td>
+</tr>
+<tr>
+<td>deadly</td>
+<td>该角色濒死时</td>
+<td><code>Character</code>对象</td>
+<td><code>d.</code></td>
+</tr>
+<tr>
+<td>beginning</td>
+<td>每轮开始时</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>round</td>
+<td>该角色任意阶段开始时</td>
+<td><code>Character</code>对象</td>
+<td><code>r.</code></td>
+</tr>
+<tr>
+<td>dodge</td>
+<td>该角色闪避时</td>
+<td><code>Character</code>对象</td>
+<td><code>dap.</code></td>
+</tr>
+<tr>
+<td>block</td>
+<td>该角色格挡时</td>
+<td><code>Character</code>对象</td>
+<td><code>rap.</code></td>
+</tr>
+<tr>
+<td>lose</td>
+<td>该角色失去装备、物品与技能时</td>
+<td><code>Character</code>对象</td>
+<td><code>losed.</code></td>
+</tr>
+<tr>
+<td>losed</td>
+<td>该装备、物品与技能被失去时</td>
+<td><code>Weapon</code>、<code>Item</code>对象等</td>
+<td><code>losed.</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_12">无目标函数</h2>
+<p>以下函数均不需要目标：</p>
+<h3 id="rn-m">r(n, m)</h3>
+<p>投n次m面骰子，即获得0~m之间（包含0与m）的随机数。n和m均为int，返回int。</p>
+<h3 id="onlyn-func1-func2">only(n, func1, func2, ...)</h3>
+<p>只有当括号内的函数同时满足大于等于n个时，才返回<code>True</code>，否则返回<code>False</code>。</p>
+<h3 id="repeatn">repeat(n)</h3>
+<p>将向上n层代码重新添加至监听列表，若为最外层代码则将整个<code>lej_list</code>添加至监听列表（n不填则默认为1）。</p>
+<h3 id="whenocac">when(oc){ac}</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>when(oc){
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    Urfis code
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>}
+</code></pre></div>
+<p>将作用域内全部代码，当作一个新的<code>Lej_list</code>加入<code>listen.ocses</code>监听列表中。</p>
+<h3 id="ifacac">if(ac){ac}</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>if(ac){
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    success:
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>        Urfis code
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    fail:
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>        Urfis code
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>}
+</code></pre></div>
+<p>创建<code>Judge</code>对象，将括号内的<code>ac</code>设定为<code>Judge.judgement</code>，并将对应的代码封装为<code>Lej_list</code>，分别设定为<code>Judge.success</code>与<code>Judge.fail</code></p>
+<p>当<code>judgement</code>内的条件满足时（返回<code>True</code>），则执行<code>success</code>内的内容，否则执行<code>fail</code>内的内容。</p>
+<p><code>success</code>和<code>fail</code>各自最多出现一次，也可以有其中一个不出现，即：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>if(ac){
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    fail:
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>        Urfis code
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>}
+</code></pre></div>
+<h3 id="whileacac">while(ac){ac}</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>while(ac){
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    Urfis code
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>}
+</code></pre></div>
+<p>创建<code>Loop</code>对象，将括号内的<code>ac</code>设定为<code>Loop.require</code>，并将括号内的代码设定为<code>Loop.content</code></p>
+<p>每次循环开始时，判断<code>Loop.require</code>的表达式是否通过（返回<code>True</code>），若是则执行<code>Loop.content</code>内的代码。</p>
+<h3 id="continuen">continue(n)</h3>
+<p>终止向上n层作用域的<code>Lej</code>结算（适用于<code>Loop</code>和<code>Judge</code>）</p>
+<h3 id="break">break()</h3>
+<p>终止当前<code>Lej_list</code>结算</p>
+<h2 id="_13">有目标函数</h2>
+<h3 id="_14">变量与列表</h3>
+<p>Urfis中并不支持“自定义变量”，只支持“自定义列表”。因此要实现变量的效果，可以转换为列表的第一项。</p>
+<p>列表分为三种：普通列表、临时列表与全局列表，他们的区别在于其存活时间。普通列表的作用域为“从创建开始，到本次战斗结束”，临时列表的作用域为“从创建时开始，到<code>listen.check()</code>结束”。全局列表的作用域为“从创建时开始，本存档内永不销毁”。</p>
+<p>临时列表以<code>_</code>开头，全局变量以<code>^</code>开头。</p>
+<p>特别的，对于<code>for</code>函数来说，如果遍历的变量为临时变量，那么会在<code>for</code>函数作用域结束时，将其销毁。</p>
+<p>要调用列表，可以通过以下代码：<code>@name</code>（返回整个列表，list）或<code>@name(n)</code>（返回列表第n项）。返回的变量永远为<strong>非拷贝</strong>类型，即<code>@name</code>返回的是名为name的列表的地址，而非其内容。</p>
+<p>另外对于<code>for</code>函数而言，其括号内的是其变量。程序在处理<code>for</code>函数时会自动将<code>@i</code>赋值为<code>@i(1)</code>。因此在<code>Loop.content</code>中，无需再使用<code>@i(1)</code>，而是可以直接使用<code>@i</code>。</p>
+<p>以下为列表的方法与函数，其<code>ta</code>无一例外均需要为str类型：</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list(n, m, k, ...)</td>
+<td>创建名为<code>ta</code>，值为[n, m, k]的列表。或修改<code>ta</code>列表的值为[n, m, k]</td>
+<td>返回该列表，参数也可以留空以创建空列表</td>
+</tr>
+<tr>
+<td>plus_list()</td>
+<td>将名为<code>ta</code>的列表中每一个纯数字项相加</td>
+<td>返回int</td>
+</tr>
+<tr>
+<td>append(n)</td>
+<td>让n成为名为<code>ta</code>的列表的新元素，若没有该列表则新建列表</td>
+<td>可以有任意个参数</td>
+</tr>
+<tr>
+<td>sample(n)</td>
+<td>随机取出名为<code>ta</code>的列表的n项</td>
+<td>返回list</td>
+</tr>
+<tr>
+<td>assign_o(n, m)</td>
+<td>让名为<code>ta</code>的列表的第n项重新赋值为m</td>
+<td>项数从0开始</td>
+</tr>
+<tr>
+<td>assign_n(n, m)</td>
+<td>让名为<code>ta</code>的列表第一个值为n的项，重新赋值为m</td>
+<td>项数从0开始</td>
+</tr>
+<tr>
+<td>assign_a(n, m)</td>
+<td>让名为<code>ta</code>的列表所有值为n的项，重新赋值为m</td>
+<td>项数从0开始</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_15">计算</h3>
+<p>以下函数支持str、int、和list类型数据的加减，int类型数据的乘除（若不是int则乘除函数会返回0）。</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plus()</td>
+<td><code>ta</code> + <code>pa</code></td>
+</tr>
+<tr>
+<td>minus()</td>
+<td><code>ta</code> - <code>pa</code></td>
+</tr>
+<tr>
+<td>multiply()</td>
+<td><code>ta</code> * <code>pa</code></td>
+</tr>
+<tr>
+<td>divide()</td>
+<td><code>ta</code> / <code>pa</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="for_iac">for(@_i){ac}</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ta.for(@_i){
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    Urfis code
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>}
+</code></pre></div>
+<p>创建<code>Loop</code>对象，将括号内的变量设定为<code>Loop.for_variable</code>，将<code>ta</code>（list）设定为<code>Loop.for_list</code>，并将括号内的代码设定为<code>Loop.content</code></p>
+<p>循环<code>ta</code>的项数次，每次让<code>for_variable</code>赋值为列表的第“当前循环数”项</p>
+<h3 id="insert">insert()</h3>
+<p>悬置当前结算，并强行结算<code>ta</code>。<code>ta</code>可以为<code>Lej</code>或<code>Lej_list</code>，若为前者，则会自动转换为<code>Lej_list</code>，并返回其返回值。</p>
+<h3 id="damagen-m-huo-np">damage(n, m, huo, np)</h3>
+<p>对<code>ta</code>（<code>Character</code>对象）造成伤害</p>
+<p>n：伤害数值，int类型。</p>
+<p>m：伤害类型，包括<code>m</code>魔法、<code>p</code>物理、<code>tr</code>真实、<code>o</code>其他、<code>n</code>未知。</p>
+<p>huo：伤害属性，参考“快速开始”页中的<code>attri</code>属性中的可能值。</p>
+<p>np：可选参数，若不写则“造成n点伤害”。若为“np”则为“造成n%的当前hp点伤害”，若为“op”则为“造成n%的最大hp点伤害”。</p>
+<h3 id="restoren-np">restore(n, np)</h3>
+<p>令<code>ta</code>（<code>Character</code>对象）恢复体力</p>
+<p>n：伤害数值，int类型。</p>
+<p>np：可选参数，若不写则“恢复n点血量”。若为“np”则为“恢复n%的当前hp点血量”，若为“op”则为“恢复n%的最大hp点血量”。</p>
+<h3 id="damage_apn">damage_ap(n)</h3>
+<p>令<code>ta</code>（<code>Character</code>对象）失去ap</p>
+<p>n：伤害数值，int类型。</p>
+<h3 id="restore_apn">restore_ap(n)</h3>
+<p>令<code>ta</code>（<code>Character</code>对象）恢复ap</p>
+<p>n：伤害数值，int类型。</p>
+<h3 id="plus_bstrength-n">plus_b(strength, n)</h3>
+<p>令<code>ta</code>（<code>Character</code>对象）本次战斗增加n点属性</p>
+<p>strength：属性类型，str类型。除了七项基本属性外，还可以填写<code>dodge</code>和<code>block</code>，则分别增加其“闪避附加值”和“格挡附加值”。</p>
+<p>n：增加值，int类型。</p>
+<h3 id="plus_gstrength-n">plus_g(strength, n)</h3>
+<p>令<code>ta</code>（<code>Character</code>对象）本存档中增加n点属性</p>
+<p>strength：属性类型，str类型。除了七项基本属性外，还可以填写<code>dodge</code>和<code>block</code>，则分别增加其“闪避附加值”和“格挡附加值”。</p>
+<p>n：增加值，int类型。</p>
+<h3 id="set_flagname">set_flag(name)</h3>
+<p>在<code>ta</code>（<code>Character</code>对象）身上放置一个名为<code>name</code>（str类型）的不可见标记。</p>
+<h3 id="remove_flagname-n">remove_flag(name, n)</h3>
+<p>去除<code>ta</code>（<code>Character</code>对象）身上n个名为<code>name</code>（str类型）的不可见标记。</p>
+<p>若没有指定<code>ta</code>，则去除全场所有角色的<code>name</code>标记。</p>
+<p>若没有<code>n</code>，则去除所有<code>name</code>标记。</p>
+<h3 id="devastate">devastate()</h3>
+<p>销毁目标类。</p>
+<p><code>ta</code>可以为<code>Weapon</code>、<code>Armor</code>、<code>Accessory</code>、<code>Item</code>、<code>Skill</code>对象。</p>
+<p>若没有指定<code>ta</code>，则默认销毁本技能。玩家失去本技能，终止当前结算，并从<code>ocses</code>中销毁一切源自本技能的<code>ocs</code>。</p>
+<h3 id="changen">change(n)</h3>
+<p>将<code>ta</code>强行修改为n。</p>
+<h3 id="owner">owner()</h3>
+<p>获得<code>ta</code>的拥有者，返回<code>Character</code>对象。</p>
+<p><code>ta</code>可以为<code>Weapon</code>、<code>Armor</code>、<code>Accessory</code>、<code>Item</code>、<code>Skill</code>对象。</p>
+<h3 id="input">input()</h3>
+<p>给玩家一个输入的机会，并返回输入的内容。</p>
+<h3 id="force">force(){}</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Skill.force() {
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    s.define(t)
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    t.define(t)
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>}
+</code></pre></div>
+<p>暂时废弃。</p>
+<p>强制插入结算<code>ta</code>（<code>Skill</code>对象），并提供<code>define</code>定义的目标域。</p>
+<h2 id="_16">判断类函数</h2>
+<p>以下函数均只有两种返回值：<code>True</code>和<code>False</code>。</p>
+<h3 id="have_flagname">have_flag(name)</h3>
+<p>检测<code>ta</code>（<code>Character</code>对象）是否拥有名为name的不可见标记。</p>
+<p>若没有指定<code>ta</code>，则检测全场玩家的<code>name</code>标记。</p>
+<p>若没有<code>name</code>，则检测所有标记。</p>
+<h3 id="inn">in(n)</h3>
+<p>检测n中是否有<code>ta</code>。</p>
+<h3 id="vsn-m">vs(n, m)</h3>
+<p>令n和m拼点，n和m均为任意int类型的对象，拼点结果为基础值+r2d8。</p>
+<p>若n拼点结果大于m的拼点结果，则返回<code>True</code>，反之返回<code>False</code>。</p>
+<p>例：令自己的敏捷和伤害来源的力量进行拼点：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>if(vs(s.agility, d.from.strength)){
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    success:
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>        Urfis code
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>}
+</code></pre></div>
+<h3 id="moren-m">more(n, m)</h3>
+<p>检测n是否大于m。</p>
+<h3 id="lessn-m">less(n, m)</h3>
+<p>检测n是否小于m。</p>
+<h3 id="equaln-m">equal(n, m)</h3>
+<p>检测n是否等于m。</p>
+<h3 id="notn">not(n)</h3>
+<p>检测n表达式是否不成立。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
