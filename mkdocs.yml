@@ -1,0 +1,40 @@
+site_name: 厄斐斯自动化跑团项目
+site_url: https://ehanguykvan.github.io/Urfis/
+site_description: 项目接口说明与使用指南
+
+# 主题配置（保留美观的 Material 主题，无需改动）
+theme:
+  name: material
+  language: zh
+  highlightjs: true
+  features:
+    - navigation.tabs
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: 切换深色模式
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: 切换浅色模式
+
+# 【关键】只保留 search 插件，移除 mkdocstrings
+plugins:
+  - search
+
+# 文档导航结构（按你的需求自定义）
+nav:
+  - 首页: index.md
+  - 快速开始: quickstart.md
+  - 代码文档: api.md
+  - 人物卡: guide.md
+  - 更新日志: changelog.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
